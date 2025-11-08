@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<title> Dimension Arrays - C PROGRAMS</title>
+</head>
+
+ <body>
+
+     <style>
+        body{
+   h1{
+    text-align: center;
+   } 
+   
+    background-color: rgb(241, 164, 140);
+}
+
+</style>   
+
+<div class="nav"><a href="index.html">&larr; Back to Topics</a> | <a href="operators.html">Previous: Operators&rarr;</a></div>|<a href="strings.html"> Next: Strings &rarr;</a></div>
+</a>
+  <h1> Single Dimension Arrays</h1>
+  <div class="topic">
+    <div class="question">
+        <h3>1. Enter an array from user and display all the value ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+     #include < stdio.h >
+
+    int main(){
+    int arr[5];
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+    
+    for (int i =0 ; i< 5 ; i++){
+        printf("\nthe number %d in the array  : %d",i+1,arr[i]);
+    }
+
+      return 0;
+
+    }
+    </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+     <h4>Output:</h4>
+    
+Enter the number : 25
+Enter the number : 22
+Enter the number : 3
+Enter the number : 2
+Enter the number : 4
+
+the number 1 in the array  : 25
+the number 2 in the array  : 22
+the number 3 in the array  : 3
+the number 4 in the array  : 2
+the number 5 in the array  : 4
+  </details>
+
+<div class="question">
+        <h3>2. Enter an array from user and print the array in reverse order ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+     #include < stdio.h >
+
+    int main(){
+    int arr[5];
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("The array in reverse order is : \n");
+    for (int i=4 ; i>=0 ; i--){
+        printf("%d\n",arr[i]);
+    }
+
+     return 0;
+
+    }
+    </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+     <h4>Output:</h4>
+    
+Enter the number : 2
+Enter the number : 3
+Enter the number : 5
+Enter the number : 7
+Enter the number : 
+6
+The array in reverse order is : 
+6
+7
+5
+3
+2
+ </details>
+<div class="question">
+        <h3>3. Enter an array from user and copy the array into second array ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+     #include < stdio.h >
+
+    int main(){
+    int arr[5] ,cpy[5];
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+
+    for( int i=0  ; i< 5 ; i++){
+        cpy[i]=arr[i];
+    }
+
+        printf("After COPING ");
+        for (int i =0 ; i< 5 ; i++){
+            printf("\nthe number %d in the Copied array  : %d",i+1,arr[i]);
+        }
+    
+         return 0;
+
+
+    }
+    </pre>
+     </details>
+        <details>
+        <summary>show output</summary>
+    <h4>Output:</h4>
+   
+Enter the number : 3
+Enter the number : 
+46
+Enter the number : 6
+Enter the number : 5
+Enter the number : 4
+After COPING 
+the number 1 in the Copied array  : 3
+the number 2 in the Copied array  : 46
+the number 3 in the Copied array  : 6
+the number 4 in the Copied array  : 5
+the number 5 in the Copied array  : 4
+
+  </details>
+<div class="question">
+        <h3>4. Enter an array from user and copy it into another array in reverse order ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+#include < stdio.h >
+
+int main() {
+    int arr[5], cpy[5];
+
+    for (int i = 0; i < 5; i++) {
+        printf("Enter the number : ");
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < 5; i++) {
+        cpy[i] = arr[4 - i];
+    }
+
+    printf("After COPYING in reverse Order\n");
+    for (int i = 0; i < 5; i++) {
+        printf("The number %d in the Copied array : %d\n", i + 1, cpy[i]);
+    }
+
+    return 0;
+}
+    </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+    <h4>Output:</h4>
+    
+Enter the number : 2
+Enter the number : 3
+Enter the number : 4
+Enter the number : 
+5
+Enter the number : 6
+After COPYING in reverse Order
+The number 1 in the Copied array : 6
+The number 2 in the Copied array : 5
+The number 3 in the Copied array : 4
+The number 4 in the Copied array : 3
+The number 5 in the Copied array : 2
+ </details>
+<div class="question">
+        <h3>5. Enter an array from user and print the number which is even ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main(){
+    int arr[5];
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("Only Even numbers in array  : \n");
+    for (int i=0 ; i< 5 ; i++){
+        if (arr[i]%2==0)
+        printf("%d\n",arr[i]);
+    }
+
+     return 0;
+
+   }
+    </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+      <h4>Output:</h4>
+ 
+Enter the number : 2
+Enter the number : 3
+Enter the number : 4
+Enter the number : 5
+Enter the number : 6
+Only Even numbers in array  : 
+2
+4
+6
+
+  </details>
+<div class="question">
+        <h3>6. Enter an array from user and print the number which is positive ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main(){
+    int arr[5];
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("Only Positive numbers in array  : \n");
+    for (int i=0 ; i<5 ; i++){
+        if (arr[i]>0)
+        printf("%d\n",arr[i]);
+    }
+
+       return 0;
+
+     }
+    </pre>  
+    </details>
+        <details>
+        <summary>show output</summary>
+    <h4>Output:</h4>
+   
+Enter the number : 7
+Enter the number : 6
+Enter the number : 5
+Enter the number : 4
+Enter the number : 3
+Only Positive numbers in array  : 
+7
+6
+5
+4
+3
+</details>
+
+
+<div class="question">
+        <h3>7. Enter an array from user and square all the values of array ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+   int main(){
+    int arr[5];
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("Square of numbers in array  : \n");
+    for (int i=0 ; i< 5 ; i++){
+        printf("%d\n",arr[i]*arr[i]);
+    }
+
+
+
+    }
+    </pre>
+    </details>
+     <details>
+        <summary>show output</summary>
+     <h4>Output:</h4>
+  
+Enter the number : 5
+Enter the number : 4
+Enter the number : 3
+Enter the number : 2
+Enter the number : 1
+Square of numbers in array  : 
+25
+16
+9
+4
+1
+</details>
+
+<div class="question">
+        <h3>8. Enter 5 values of array from user and print odd number of array ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+    int main(){
+    int arr[5];
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+    
+    printf("Only ODD numbers in array  : \n");
+    for (int i=0 ; i< 5 ; i++){
+        if (!(arr[i]%2==0))
+        printf("%d\n",arr[i]);
+    }
+
+      return 0;
+
+    }
+    </pre>
+    </details>
+     <details>
+        <summary>show output</summary>
+    <h4>Output:</h4>
+   
+Enter the number : 3
+Enter the number : 6
+Enter the number : 7
+Enter the number : 9
+Enter the number : 2
+Only ODD numbers in array  : 
+3
+7
+9
+
+ </details>
+<div class="question">
+        <h3>9. Enter 5 values of array from user and add all values ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+   int main(){
+    int arr[5],sum=0;
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+    
+  
+    for (int i=0 ; i< 5 ; i++){
+        sum+=arr[i];
+    }
+    printf("SUM of numbers in array  : %d\n", sum);
+
+       return 0;
+    }
+    </pre>
+    </details>
+     <details>
+        <summary>show output</summary>
+ <h4>Output:</h4>
+
+Enter the number : 4
+Enter the number : 6
+Enter the number : 3
+Enter the number : 2
+Enter the number : 1
+SUM of numbers in array  : 16
+
+ </details>
+<div class="question">
+        <h3>10. Enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+    int main(){
+    int arr[5],a,found=0;
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+
+    printf("Enter the Number to check : ");
+    scanf("%d",&a);
+    
+  
+    for (int i=0 ; i< 5 ; i++){
+        if (arr[i]==a)
+        found=1;
+    }
+   
+    found ? printf("Found") : printf("NoT Found") ;
+
+
+    }
+    </pre>
+    </details>
+     <details>
+        <summary>show output</summary>
+ <h4>Output:</h4>
+
+Enter the number : 2
+Enter the number : 3
+Enter the number : 4
+Enter the number : 5
+Enter the number : 6
+Enter the Number to check : 5
+Found
+</details>
+ <div class="question">
+        <h3>11. Enter five values of array and sort in ascending order ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+    int main(){
+    int arr[5], temp;
+
+    for(int i=0; i< 5; i++){
+        printf("Enter number %d : ", i+1);
+        scanf("%d", &arr[i]);
+    }
+
+
+    for(int i=0; i< 5-1; i++){
+        for(int j=i+1; j<5; j++){
+            if(arr[i] > arr[j]){
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+
+    printf("\nAscending order:\n");
+    for(int i=0; i< 5; i++){
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+   }
+
+    </pre>
+    </details>
+     <details>
+        <summary>show output</summary>
+ <h4>Output:</h4>
+ 
+Enter number 1 : 2
+Enter number 2 : 4
+Enter number 3 : 5
+Enter number 4 : 6
+Enter number 5 : 3
+
+Ascending order:
+2 3 4 5 6 
+
+</details>
+<div class="question">
+        <h3>12. Find maximum values of array ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+   int main(){
+    int arr[5],max;
+    for (int i =0 ; i< 5 ; i++){
+        printf("Enter the number : ");
+        scanf("%d",&arr[i]);
+    }
+
+    max = arr[0];
+
+    for(int i=1; i<5; i++){
+        if(arr[i] > max)
+            max = arr[i];
+    }
+
+    printf("The Maximum Value is : %d", max);
+    return 0;
+   }
+
+    </pre>
+    </details>
+     <details>
+        <summary>show output</summary>
+<h4>Output:</h4>
+
+Enter the number : 5
+Enter the number : 4
+Enter the number : 3
+Enter the number : 8
+Enter the number : 2
+The Maximum Value is : 8
+
+ </details>
+
+<div class="question">
+        <h3>13. Find minimum values of array ?</h3>
+    </div>
+<pre>
+    <details>
+        <summary>show code</summary>
+  #include < stdio.h >
+
+    int main(){
+    int arr[5], min;
+
+    for(int i=0; i< 5; i++){
+        printf("Enter the number : ");
+        scanf("%d", &arr[i]);
+    }
+
+    min = arr[0];
+
+    for(int i=1; i< 5; i++){
+        if(arr[i] < min)
+            min = arr[i];
+    }
+
+    printf("The Minimum Value is : %d", min);
+
+    return 0;
+    }
+
+    </pre>
+    </details>
+     <details>
+        <summary>show output</summary>
+<h4>Output:</h4>
+
+Enter the number : 7
+Enter the number : 6
+Enter the number : 5
+Enter the number : 4
+Enter the number : 3
+The Minimum Value is : 3
+  </details>
+</body>
+</html>

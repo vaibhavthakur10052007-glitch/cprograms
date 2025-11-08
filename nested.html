@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<title> Iterative Control Structures(nested loops) - C PROGRAMS</title>
+
+ <body>
+
+    <style>
+        body{
+   h1{
+    text-align: center;
+   } 
+   
+   background-color: rgb(240, 132, 99);
+}
+
+</style>   
+
+
+<div class="nav"><a href="index.html">&larr; Back to Topics</a> | <a href="loops.html">Previous: iterative control structures&rarr;</a></div>|<a href="array.html">Next: multi dimension arrays&rarr;</a></div>
+  <h1>Iterative Control Structures(nested loops)</h1>
+  <div class="topic">
+    <div class="question">
+        <h3>1. Write a program print the pattern on the screen i.e. ? 11111 11111 11111</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+    int main(){
+    int a;
+    printf("enter the number : ");
+    scanf("%d",&a);
+
+    for (int i=1 ; i<=a ; i++){
+        for (int j=1 ; j<=a+2 ; j++){
+        printf("1");}
+        printf(" ");
+
+    }
+
+
+    return 0;
+    }
+        </pre>
+         </details>
+        <details>
+        <summary>show output</summary>
+        <h4>Output:</h4>
+    
+enter the number : 2
+1111 1111 
+ 
+ </details>
+</body>
+</html>

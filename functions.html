@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<title>Function - C PROGRAMS</title>
+
+ <body>
+
+     <style>
+        body{
+   h1{
+    text-align: center;
+   } 
+ 
+    background-color: rgb(241, 164, 140);
+}
+
+</style> 
+
+
+<div class="nav"><a href="index.html">&larr; Back to Topics</a> | <a href="basic.html">Previous: basic input output&rarr;</a></div><a href="functions.html">Next: Functions &rarr;</a></div>
+  <h1> Functions</h1>
+  <div class="topic">
+    <div class="question">
+         <h3>1. Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer ?</h3>
+        </div>
+ <details>
+        <summary>show code</summary>
+          <pre> 
+#include < stdio.h >
+#include < conio.h >
+int input(){ 
+    int a;
+    printf("+ ================================================================= +\n");
+    printf("\nEnter the Number : ");
+    scanf("%d",&a);
+    printf("\n");
+    return a;
+}
+
+float inputf(){  
+    float a;
+    printf("+ ================================================================= +\n");
+    printf("\nEnter the Number : ");
+    scanf("%f",&a);
+    printf("\n");
+    return a;
+}
+
+int sum(int a,int b){ 
+    return a+b;
+}
+
+int sub(int a,int b){  
+    return a-b;
+}
+
+int pro(int a,int b){   
+    return a*b;
+}
+
+float div(float a,float b){   
+    return a/b;
+}
+
+
+
+int main(){
+
+    int a,b ; float c,d;
+
+    a=input();
+    b=input();
+    printf("\n");
+    printf("THE SUM OF %d and %d is : %d\n",a,b,sum(a,b));
+
+
+    a=input();
+    b=input();
+    printf("\n");
+    printf("THE DIFFERERNCE OF %d and %d is : %d\n",a,b,sub(a,b));
+
+    a=input();
+    b=input();
+    printf("\n");
+    printf("THE SUM OF %d and %d is : %d\n",a,b,sum(a,b));
+
+
+    a=input();
+    b=input();
+    printf("\n");
+    printf("THE PRODUCT OF %d and %d is : %d\n",a,b,pro(a,b));
+
+
+    a=input();
+    b=input();
+    printf("\n");
+    printf("THE DIFFERERNCE OF %d and %d is : %d\n",a,b,sub(a,b));
+
+    a=input();
+    b=input();
+    printf("\n");
+    printf("THE PRODUCT OF %d and %d is : %d\n",a,b,pro(a,b));
+
+
+    c=inputf();
+    d=inputf();
+    printf("\n");
+    d==0 ? printf("Cannot divide by 0 ") : printf("THE QUOTIENT WHEN %f is DIVIDED BY %f is : %f\n",c,d,div(c,d));
+
+
+    c=inputf();
+    d=inputf();
+    printf("\n");
+    d==0 ? printf("Cannot divide by 0 ") : printf("THE QUOTIENT WHEN %f is DIVIDED BY %f is : %f\n",c,d,div(c,d));
+
+    a=input();
+    b=input();
+    printf("\n");
+    printf("THE SUM OF %d and %d is : %d\n",a,b,sum(a,b));
+
+
+
+    return 0;
+}
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+        <h4>Output:</h4>
+
+    
++ ================================================================= +
+
+Enter the Number : 2
+
++ ================================================================= +
+
+Enter the Number : 3
+
+
+THE SUM OF 2 and 3 is : 5
++ ================================================================= +
+
+Enter the Number : 2
+
++ ================================================================= +
+
+Enter the Number : 3
+
+
+THE DIFFERERNCE OF 2 and 3 is : -1
++ ================================================================= +
+
+Enter the Number : 2
+
++ ================================================================= +
+
+Enter the Number : 4
+
+
+THE SUM OF 2 and 4 is : 6
++ ================================================================= +
+
+Enter the Number : 2
+
++ ================================================================= +
+
+Enter the Number : 4
+
+
+THE PRODUCT OF 2 and 4 is : 8
++ ================================================================= +
+
+Enter the Number : 6
+
++ ================================================================= +
+
+Enter the Number : 5
+
+
+THE DIFFERERNCE OF 6 and 5 is : 1
++ ================================================================= +
+
+Enter the Number : 4
+
++ ================================================================= +
+
+Enter the Number : 3
+
+
+THE PRODUCT OF 4 and 3 is : 12
++ ================================================================= +
+
+Enter the Number : 5
+
++ ================================================================= +
+
+Enter the Number : 6
+
+
+THE QUOTIENT WHEN 5.000000 is DIVIDED BY 6.000000 is : 0.833333
++ ================================================================= +
+
+Enter the Number : 4
+
++ ================================================================= +
+
+Enter the Number : 4
+
+
+THE QUOTIENT WHEN 4.000000 is DIVIDED BY 4.000000 is : 1.000000
++ ================================================================= +
+
+Enter the Number : 3
+
++ ================================================================= +
+
+Enter the Number : 
+2
+
+
+THE SUM OF 3 and 2 is : 5
+</details>
+        <div class="question">
+          <h3>2. Write a program to enter 10 number from the user add the number and display the answer ?</h3>
+        </div>
+<details>
+    <summary>show code </summary>
+        <pre>
+
+
+    #include < stdio.h >
+
+    int main(){
+    
+    int a, sum=0; 
+
+    for (int i=0 ; i< 10 ; i++){
+        printf("Enter the Number %d Here :",i+1);
+        scanf("%d",&a);
+        sum+=a;
+    }
+    printf("\n+ ================================================================= +\n");
+    printf("The sum of The NUMBERS You entered is : %d",sum);
+    printf("\n+ ================================================================= +\n");
+
+    return 0; 
+}
+
+
+</pre>
+</details>
+        <details>
+            <summary>show output</summary>
+  <h4>Output:</h4>
+ 
+Enter the Number 1 Here :2
+Enter the Number 2 Here :4
+Enter the Number 3 Here :3
+Enter the Number 4 Here :2
+Enter the Number 5 Here :1
+Enter the Number 6 Here :6
+Enter the Number 7 Here :
+5
+Enter the Number 8 Here :4
+Enter the Number 9 Here :8
+Enter the Number 10 Here :7
+
++ ================================================================= +
+The sum of The NUMBERS You entered is : 42
++ ================================================================= +
+
+
+        </details>
+
+<div class="question">
+          <h3>3. Write a program to return an array from function ?</h3>
+        </div>
+
+<details>
+    <summary>show code </summary>
+        <pre>
+
+   #include < stdio.h >
+
+   int arrayreturn(){
+
+    static int arr[10]={1,2,3,4,5,6,7,8,9,0};
+
+    return arr;
+   }
+
+    int main(){
+    int *p,size=10;
+
+    p=arrayreturn();
+
+    for (int i=0; i< 10 ; i++){
+        printf("\n%d\n", *p );      
+        p++;
+    }
+    return 0; 
+   }
+    
+
+        </pre>
+        </details>
+        <details>
+            <summary>show output</summary>
+            <h4>Output:</h4>
+
+             </details>
+
+
+<div class="question">
+          <h3>4. Making following program using local and global variable ? Factorial , Reverse , Palindrome , Prime numbers, Armstrong , Fibonacci?</h3>
+        </div>
+<details>
+    <summary>show code </summary>
+        <pre>
+
+   #include < stdio.h >
+
+    int num;
+   int result;
+
+
+    void factorial() {
+    result = 1;
+    for (int i = 1; i <= num; i++) {
+        result *= i;
+    }
+    printf("\nFactorial of %d = %d\n", num, result);
+    }
+
+   void reverse() {
+    int temp = num;
+    int rev = 0;
+    while (temp > 0) {
+        rev = rev * 10 + temp % 10;
+        temp /= 10;
+    }
+    printf("Reverse of %d = %d\n", num, rev);
+    }
+
+    void palindrome() {
+    int temp = num;
+    int rev = 0;
+    while (temp > 0) {
+        rev = rev * 10 + temp % 10;
+        temp /= 10;
+    }
+    if (rev == num)
+        printf("%d is a Palindrome number.\n", num);
+    else
+        printf("%d is not a Palindrome number.\n", num);
+    }
+
+    void prime() {
+    int flag = 0;
+    if (num <= 1) flag = 1;
+    for (int i = 2; i <= num / 2; i++) {
+        if (num % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    if (flag == 0)
+        printf("%d is a Prime number.\n", num);
+    else
+        printf("%d is not a Prime number.\n", num);
+   }
+
+    void armstrong() {
+    int temp = num, sum = 0, digits = 0;
+    while (temp > 0) {
+        digits++;
+        temp /= 10;
+    }
+    temp = num;
+    while (temp > 0) {
+        int d = temp % 10;
+        int power = 1;
+        for (int i = 0; i < digits; i++) {
+            power *= d;
+        }
+        sum += power;
+        temp /= 10;
+    }
+    if (sum == num)
+        printf("%d is an Armstrong number.\n", num);
+    else
+        printf("%d is not an Armstrong number.\n", num);
+    }
+
+   void fibonacci() {
+    int a = 0, b = 1, c;
+    printf("Fibonacci series (%d terms): ", num);
+    for (int i = 1; i <= num; i++) {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    printf("\n");
+   }
+
+
+    int main() {
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    printf("\n=== Operations on %d ===\n", num);
+    factorial();
+    reverse();
+    palindrome();
+    prime();
+    armstrong();
+    fibonacci();
+
+    return 0;
+    }
+
+    
+
+        </pre>
+         </details>
+        <details>
+            <summary>show output</summary>
+            <h4>Output</h4>
+
+
+            </details>
+
+
+<div class="question">
+          <h3>5. Swap numbers using Call by address ?</h3>
+        </div>
+<details>
+    <summary>show code </summary>
+        <pre>
+    #include < stdio.h >
+
+    int main(){
+    int a=6,b=8;    
+    int *p=&a,*q=&b, temp;
+
+    temp=*p;
+    *p=*q;
+    *q=temp;
+
+    printf("%d and %d ",*p,*q);
+
+
+
+
+    return 0;
+    }
+
+     </details>
+        <details>
+            <summary>show output</summary>
+            </pre>
+   <h4>Output:</h4>
+   
+8 and 6 
+   </details>
+
+    <div class="question">
+          <h3>6. Swap numbers using Call by function ?</h3>
+        </div>
+
+        <details>
+    <summary>show code </summary>
+        <pre>
+   #include < stdio.h >
+
+
+    void swap(int *x, int *y) {
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+    }
+
+
+    int main(){
+ 
+    int a=6,b=10;
+    printf("Before Swapping Num1 is %d and Num2 is %d \n",a,b);
+    swap(&a,&b);
+    printf("After Swapping Num1 is %d and Num2 is %d \n",a,b);
+
+    return 0; 
+    }
+
+            </pre>
+            </details>
+        <details>
+            <summary>show output</summary>
+<h4>Output:</h4>
+
+Before Swapping Num1 is 6 and Num2 is 10 
+After Swapping Num1 is 10 and Num2 is 6 
+
+ </details>
+     <div class="question">
+          <h3>7. Make function for find out power of number, enter the number and power from user ?</h3>
+        </div>
+
+<details>
+    <summary>show code </summary>
+          <pre>
+        
+ #include < stdio.h >
+
+int expo(int a,int pow){
+    int ans=1;
+    for (int i=1 ; i<=pow ; i++){
+        ans*=a;
+    }
+    return ans;
+}
+
+int main(){
+    int num,power;
+
+    printf("Enter the Number : ");
+    scanf("%d",&num);
+
+    printf("Enter the Power to be Raised : ");
+    scanf("%d",&power);
+
+    printf("The final answer is %d",expo(num,power));
+    return 0;
+}
+            </pre>
+       
+            
+        </details>
+            <details>
+            <summary>show output</summary>
+ <h4>Output:</h4>
+
+
+           
+Enter the Number : 2
+Enter the Power to be Raised : 4
+The final answer is 16
+    </details>
+
+     <div class="question">
+          <h3>8. Make function for find out Cube a user entered number ?</h3>
+        </div>
+<details>
+    <summary>show code </summary>
+        <pre>
+        
+#include < stdio.h >
+
+
+int cube(int a){
+    return a*a*a;
+}
+int main(){
+
+    int a;
+    printf("Enter the number : ");
+    scanf("%d",&a);
+    printf("The CUBE of %d is %d",a,cube(a));
+    return 0;
+}
+            </pre>
+
+            </details>
+            <details>
+            <summary>show output</summary>
+   <h4>Output:</h4>
+  
+Enter the number : 3
+The CUBE of 3 is 27
+
+   </details>
+</body>
+</html>

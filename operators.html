@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<title> Operators- C PROGRAMS</title>
+
+ <body>
+
+      <style>
+        body{
+   h1{
+    text-align: center;
+   } 
+   
+      background-color: rgb(241, 164, 140);
+}
+
+</style>   
+
+
+<div class="nav"><a href="index.html">&larr; Back to Topics</a> | <a href="array.html">Previous:multi dimension arrays&rarr;</a></div>|<a href="singledimension.html">Next: single dimension arrays&rarr;</a></div>
+  <h1>Operators</h1>
+  <div class="topic">
+    <div class="question">
+        <h3>1. Write a program to show that example of pre-increment ?</h3>
+    </div>
+    <details>
+        <summary>show code</summary>
+    <pre>
+     #include < stdio.h >
+    int main(){
+    int  a =5;
+    printf("Value befor pre increment is : %d\n",a);
+    printf("Value during pre increment is : %d\n",++a);
+    printf("Value After pre increment is : %d",a);
+
+    return 0;
+     }
+    </pre>
+      </details>
+        <details>
+        <summary>show output</summary>
+    <h4>Output:</h4>
+   
+Value befor pre increment is : 5
+Value during pre increment is : 6
+Value After pre increment is : 6
+
+   </details>
+<div class="question">
+        <h3>2. Write a program to show that example of post-increment ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main(){
+    int a = 5;
+
+    printf("Value before post-increment : %d\n", a);
+    printf("Value during post-increment : %d\n", a++);
+    printf("Value after post-increment  : %d\n", a);
+
+    return 0;
+    }
+
+    </pre>
+     </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Outpt:</h4>
+  
+Value before post-increment : 5
+Value during post-increment : 5
+Value after post-increment  : 6
+ </details>
+
+<div class="question">
+        <h3>3. Write a program to show that example of pre-decrement ?</h3>
+    </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   
+    #include < stdio.h > 
+
+     int main(){
+    int a = 5;
+
+    printf("Value before pre-decrement : %d\n", a);
+    printf("Value during pre-decrement : %d\n", --a);
+    printf("Value after pre-decrement  : %d\n", a);
+
+    return 0;
+    }
+
+    </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+    <h4>Output:</h4>
+    
+Value before pre-decrement : 5
+Value during pre-decrement : 4
+Value after pre-decrement  : 4
+ </details>
+
+<div class="question">
+        <h3>4. Write a program to show that example of post-decrement ?</h3>
+    </div>
+
+<details>
+        <summary>show code</summary>
+     <pre>
+   
+    #include < stdio.h >
+
+     int main(){
+    int a = 5;
+
+    printf("Value before post-decrement : %d\n", a);
+    printf("Value during post-decrement : %d\n", a--);
+    printf("Value after post-decrement  : %d\n", a);
+
+    return 0;
+    }
+    </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+    <h4>Output:</h4>
+
+Value before post-decrement : 5
+Value during post-decrement : 5
+Value after post-decrement  : 4
+
+  </details>
+
+
+<div class="question">
+        <h3>5. Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?
+</h3>
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+    int main(){
+    int a, b;
+
+    printf("Enter first number for Addition : ");
+    scanf("%d", &a);
+    printf("Enter second number for Addition : ");
+    scanf("%d", &b);
+    printf("Sum = %d\n\n", a + b);
+
+    printf("Enter first number for Subtraction : ");
+    scanf("%d", &a);
+    printf("Enter second number for Subtraction : ");
+    scanf("%d", &b);
+    printf("Difference = %d\n\n", a - b);
+
+    printf("Enter first number for Multiply : ");
+    scanf("%d", &a);
+    printf("Enter second number for Multiply : ");
+    scanf("%d", &b);
+    printf("Product = %d\n\n", a * b);
+
+
+    printf("Enter first number for Division : ");
+    scanf("%d", &a);
+    printf("Enter second number for Division : ");
+    scanf("%d", &b);
+
+    b != 0 ? printf("Quotient = %d\n\n", a / b) : printf("Division by ZERO not allowed\n\n");
+    
+    printf("Enter first number for Remainder : ");
+    scanf("%d", &a);
+    printf("Enter second number for remainder : ");
+    scanf("%d", &b);
+
+    b != 0 ? printf("Remainder = %d\n", a % b) : printf("Division by ZERO not allowed\n\n");
+
+    return 0;
+}
+
+   
+    </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+
+Enter first number for Addition : 2
+Enter second number for Addition : 5
+Sum = 7
+
+Enter first number for Subtraction : 4
+Enter second number for Subtraction : 3
+Difference = 1
+
+Enter first number for Multiply : 2
+Enter second number for Multiply : 2
+Product = 4
+
+Enter first number for Division : 4
+Enter second number for Division : 2
+Quotient = 2
+
+Enter first number for Remainder : 4
+Enter second number for remainder : 5
+Remainder = 4
+
+
+
+<div class="question">
+        <h3>6. Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number ?</h3>
+
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+
+    </pre>
+    #include < stdio.h >
+
+    int main() {
+    long long num;
+    printf("Enter a number: ");
+    scanf("%lld", &num);
+
+    int lastDigit = num % 10;
+    printf("Last digit of %lld is: %d\n", num, lastDigit);
+    return 0;
+    }
+
+
+         </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+   Enter a number: 12345
+   Last digit of 12345 is: 5
+
+        </details>
+
+
+   <div class="question">
+        <h3>7. Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h3>
+
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main() {
+    float num;
+    printf("Enter a decimal number: ");
+    scanf("%f", &num);
+
+    int intPart = (int)num;
+    float decimalPart = num - intPart;
+
+    printf("Right-hand side of the decimal point: %.3f\n", decimalPart);
+    return 0;
+     }
+
+    </pre>
+
+
+         </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+
+Enter a decimal number: 2.2
+Right-hand side of the decimal point: 0.200
+
+
+   <div class="question">
+        <h3>8. Enter a number from user and find out cube of numbers ?</h3>
+    
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    int cube = num * num * num;
+    printf("Cube of %d is: %d\n", num, cube);
+    return 0;
+   }
+
+    </pre>
+
+
+         </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+Enter a number: 5
+Cube of 5 is: 125
+
+
+   <div class="question">
+        <h3>9. Enter float number from user and round of the number ?</h3>
+
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+#include < stdio.h >
+#include < math.h >
+
+int main() {
+    float num;
+    printf("Enter a float number: ");
+    scanf("%f", &num);
+
+    int rounded = round(num);
+    printf("Rounded value: %d\n", rounded);
+    return 0;
+}
+
+    </pre>
+
+
+         </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+
+Enter a float number:1.9
+Rounded value: 2
+
+
+
+   <div class="question">
+        <h3>10. Enter a lower case character from user and print it into upper case ?</h3>
+
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main() {
+    char ch;
+    printf("Enter a lowercase character: ");
+    scanf(" %c", &ch);
+
+    if (ch >= 'a' && ch <= 'z')
+        ch = ch - 32;
+
+    printf("Uppercase character: %c\n", ch);
+    return 0;
+    }
+
+    </pre>
+
+
+         </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+Enter a lowercase character: a
+Uppercase character: A
+
+
+   <div class="question">
+        <h3>11. Enter marks of students and calculate average of students marks ?</h3>
+
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main() {
+    int n;
+    printf("Enter number of subjects: ");
+    scanf("%d", &n);
+
+    float marks, sum = 0;
+    for (int i = 1; i <= n; i++) {
+        printf("Enter marks of subject %d: ", i);
+        scanf("%f", &marks);
+        sum += marks;
+    }
+
+    float average = sum / n;
+    printf("Average marks = %.2f\n", average);
+    return 0;
+   }
+
+    </pre>
+
+
+         </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+Enter number of subjects: 3
+Enter marks of subject 1: 75
+Enter marks of subject 2: 80
+Enter marks of subject 3: 85
+Average marks = 80.00
+
+
+   <div class="question">
+        <h3>12. Calculate simple interest = (P x R x T)/ 100?</h3>
+
+    </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include < stdio.h >
+
+    int main() {
+    float P, R, T, SI;
+    printf("Enter Principal amount: ");
+    scanf("%f", &P);
+    printf("Enter Rate of interest: ");
+    scanf("%f", &R);
+    printf("Enter Time (in years): ");
+    scanf("%f", &T);
+
+    SI = (P * R * T) / 100;
+    printf("Simple Interest = %.2f\n", SI);
+    return 0;
+    }
+
+    </pre>
+
+
+         </pre>
+    </details>
+        <details>
+        <summary>show output</summary>
+   <h4>Output:</h4>
+Enter Principal amount: 1000
+Enter Rate of interest: 5
+Enter Time (in years): 2
+Simple Interest = 100.00
+
+
+</details>
+</body>
+</html>

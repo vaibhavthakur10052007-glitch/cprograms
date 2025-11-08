@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<title> Strings - C PROGRAMS</title>
+</head>
+
+ <body>
+
+     <style>
+        body{
+   h1{
+    text-align: center;
+   } 
+ 
+     background-color:  rgb(241, 164, 140);
+}
+
+</style>   
+
+
+
+<div class="nav"><a href="index.html">&larr; Back to Topics</a> | <a href="singledimension.html">Previous: Single Dimension Arrays&rarr;</a></div>|<a href="structures.html"> Next: Structures &rarr;</a></div>
+</a>
+  <h1>Strings</h1>
+  <div class="topic">
+    <div class="question">
+        <h3>1. Enter a string from user and convert in uppercase ?</h3>
+       </div>
+ <details>
+        <summary>show code</summary>
+         <pre>
+    #include < stdio.h >
+    #include < string.h >
+
+    int main(){
+    char str[20]; int len;
+    printf("Enter the String :");
+    gets(str);
+    len=strlen(str);
+
+    for (int i=0 ; i<len ; i++){
+        if (str[i]>=97 && str[i]<=122)
+        str[i]= str[i]-32;
+    }
+
+    printf("Now the string is %s" , str);
+
+    return 0;
+    }
+    </pre>
+     </details>
+     <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+        </details>
+ 
+
+<div class="question">
+        <h3>2. Enter a string from user and convert into lowercase ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+   #include < stdio.h >
+   #include < string.h >
+
+    int main(){
+    char str[20]; int len;
+    printf("Enter the String :");
+    gets(str);
+    len=strlen(str);
+
+    for (int i=0 ; i<len ; i++){
+        if (str[i]>=65 && str[i]<=80)
+        str[i]= str[i]+32;
+    }
+
+    printf("Now the string is %s" , str);
+
+    return 0;
+    }
+    </pre>
+</details>
+    <details>
+        <summary>show code</summary>
+        <h4>Output</h4>
+
+        </details>
+  
+
+<div class="question">
+        <h3>3. Enter a string from user and convert into sentence case ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+   #include < stdio.h >
+    #include < string.h >
+
+    int main(){
+    char str[20]; int len;
+    printf("Enter the String :");
+    gets(str);
+    len=strlen(str);
+
+    if (str[0]>=97 && str[0]<=122) str[0]-=32 ; 
+
+    for (int i=1 ; i<len ; i++){
+        if (str[i]>=65 && str[i]<=80)
+        str[i]= str[i]+32;
+    }
+
+    printf("The String in sentence case is :  %s" , str);
+
+    return 0;
+    }
+    </pre>
+</details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+
+
+<div class="question">
+        <h3>5. Enter a string from user and convert into toggle case ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+    #include < stdio.h >
+   #include < string.h> 
+
+    int main(){
+    char str[20]; int len;
+    printf("Enter the String :");
+    gets(str);
+    len=strlen(str);
+
+    for (int i=0 ; i<len ; i++){ 
+        
+        if (str[i]>=97 && str[i]<=122) 
+        str[i]-=32;
+
+        else if (str[i]>=65 && str[i]<=80)
+        str[i]+=32;
+    }
+
+    printf("The String in Toggle case is :  %s" , str);
+
+    return 0;
+    }
+    </pre>
+
+    </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+        </details>
+ 
+
+<div class="question">
+        <h3>6. Enter a string from user and final length of the string ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+   #include < stdio.h >
+    #include < string.h >
+
+   int main(){
+    char str[20];
+    printf("Enter the String :");
+    gets(str);
+    printf("The String Length is :  %d" , strlen(str));
+
+    return 0;
+    }
+    </pre>
+    </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+        </details>
+   
+<div class="question">
+        <h3>7. Enter a string from user and compare those string ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+   #include < stdio.h >
+   #include < string.h >
+
+    int main() {
+    char str1[50], str2[50];
+
+    printf("Enter First String : ");
+    gets(str1);
+    printf("Enter Second String : ");
+    gets(str2);
+
+    if (strcmp(str1, str2) == 0)
+        printf("Both strings are SAME");
+    else
+        printf("Strings are DIFFERENT");
+
+    return 0;
+   }
+
+    </pre>
+    </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+  
+<div class="question">
+        <h3>8. Enter a string from user and concatenate the string ?</h3>
+       </div>
+
+       <details>
+        <summary>show code</summary>
+         <pre>
+    #include < stdio.h >
+   #include < string.h >
+
+   int main() {
+    char str1[100], str2[50];
+
+    printf("Enter First String : ");
+    gets(str1);
+
+    printf("Enter Second String : ");
+    gets(str2);
+
+    strcat(str1, str2);
+
+    printf("After Concatenation : %s", str1);
+
+    return 0;
+   }
+
+    </pre>
+    </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+<div class="question">
+        <h3>9. Enter a string from user and copy that string into another string ?</h3>
+       </div>
+ <details>
+        <summary>show code</summary>
+         <pre>
+    #include < stdio.h >
+    #include < string.h >
+
+    int main(){
+    char str[100];
+    int n, len;
+
+    printf("Enter the String : ");
+    gets(str);
+
+    len = strlen(str);
+
+    printf("Enter the Number : ");
+    scanf("%d", &n);
+
+    if (n >= 0 && n < len)
+        printf("Character at position %d is : %c", n, str[n]);
+    else
+        printf("Out of Bound");
+
+    return 0;
+     }
+
+
+  </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+<div class="question">
+        <h3>11. Enter the string from user and print each character in new line ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+    #include < stdio.h >
+    #include < string.h >
+
+    int main() {
+    char str[50] ; int len;
+    printf("Enter the String :");
+    gets(str);
+    len=strlen(str);
+    for (int i=0 ; i< len ; i++){
+        printf("%c\n",str[i]);
+    }
+
+    return 0;
+   }
+
+
+     </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+<div class="question">
+        <h3>12. Enter the string from user and copy reverse order into another string ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+   #include < stdio.h >
+  #include < string.h >
+
+   int main(){
+    char str[50],revcpy[50]; int len;
+    printf("Enter the String :");
+    gets(str);
+    len=strlen(str);
+    
+    for (int i = 0; i < len; i++) {
+        revcpy[i] = str[len - 1 - i];
+    }
+    revcpy[len]=0;
+    printf("The REVERSE of String that you entered is : %s",revcpy);
+
+    return 0;
+    }
+
+
+    </pre>
+    
+     </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+
+<div class="question">
+        <h3>13. Enter two string from user and print difference each character ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+  #include < stdio.h >
+  #include < string.h >
+
+int main(){
+    char str1[100], str2[100];
+    int len1,len2,minlen;
+
+    printf("Enter First String : ");
+    gets(str1);
+    len1=strlen(str1);
+    printf("Enter Second String : ");
+    gets(str2);
+    len2=strlen(str2);
+    minlen= len1< len2? len1 : len2 ;
+
+    for (int i =0 ; i< minlen ; i++ ){
+        printf("\nThe ASCII difference of %c and %c is : %d",str1[i],str2[i],str1[i]-str2[i]);
+    }
+
+
+    return 0;
+   }
+
+    </pre>
+    </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+   
+
+<div class="question">
+        <h3>14. Enter the string from user and enter a character , it is exist or not ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+    #include < stdio.h >
+   #include < string.h >
+
+   int main() {
+    char str[100], ch;
+    int len,found=0;
+    printf("Enter The String : ");
+    gets(str);
+    len=strlen(str);
+    printf("Enter The Char : ");
+    scanf("%c",&ch);
+
+
+    for (int i = 0; i < len; i++) {
+        if (str[i] == ch) {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found)
+        printf("Yes '%c' is present in \"%s\".", ch, str);
+    else
+        printf("No '%c' is not present in \"%s\".", ch, str);
+
+
+    return 0;
+    } 
+
+    </pre>
+   
+     </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+<div class="question">
+        <h3>15. Enter the string from user and enter a character if it is exist then print the bound number ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+   #include < stdio.h >
+   #include < string.h >
+
+   int main() {
+    char str[100], ch;
+    int len,bound=0,i;
+    printf("Enter The String : ");
+    gets(str);
+    len=strlen(str);
+    printf("Enter The Char : ");
+    scanf("%c",&ch);
+
+
+    for (i = 0; i < len; i++) {
+        if (str[i] == ch) {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found)
+        printf("Yes '%c' is present in \"%s\". and bound number is %d", ch, str,i);
+    else
+        printf("No '%c' is not present in \"%s\".", ch, str);
+
+
+    return 0;
+   }
+
+    </pre>
+   
+    </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+
+<div class="question">
+        <h3>16. Enter the string from user and count all vowels ?</h3>
+       </div>
+
+       <details>
+        <summary>show code</summary>
+        
+         <pre>
+#include < stdio.h >
+#include < string.h >
+
+int main() {
+    char str[100];
+    int count=0,len;
+    printf("Enter The String : ");
+    gets(str);
+    len=strlen(str);
+
+    for (int i=0; i < len ; i++){
+
+        switch (str[i]){
+            case 'a':
+            count++;
+            break;
+            case 'e':
+            count++;
+            break;
+            case 'i':
+            count++;
+            break;
+            case 'o':
+            count++;
+            break;
+            case 'u':
+            count++;
+            break;
+            case 'A':
+            count++;
+            break;
+            case 'E':
+            count++;
+            break;
+            case 'I':
+            count++;
+            break;
+            case 'O':
+            count++;
+            break;
+            case 'U':
+            count++;
+            break;
+        }
+        
+    }
+
+    printf ("The number of vowels in %s is %d",str,count);
+
+    return 0;
+    } 
+
+
+    </pre>
+   </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+
+<div class="question">
+        <h3>17. Enter the string from user and enter bound number and print character on that bound ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+#include < stdio.h >
+#include < string.h >
+
+int main() {
+    char str[100];
+    int len,bound;
+    printf("Enter The String : ");
+    gets(str);
+    len=strlen(str);
+    printf("Enter the bound number :");
+    scanf("%d",&bound);
+    if (bound<=len && bound>0)
+    printf("The Char that is bounded to %d is : %c",bound,str[bound-1]);
+    else printf("Enter a valid bound Number");
+
+
+    return 0;
+}
+    </pre>
+    
+    </pre>
+   </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+
+
+<div class="question">
+        <h3>19. Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects ?</h3>
+       </div>
+<details>
+        <summary>show code</summary>
+         <pre>
+#include < stdio.h >
+#include < string.h >
+
+int main(){
+    int size = 5;
+
+    struct datatem {
+        char roll[8];
+        char name[51];
+        char class[10];
+        int marks[5];
+    };
+
+    struct datatem stddata[size];
+
+    for (int i = 0; i < size; i++) {
+
+        printf("Enter the Records of students :\n");
+        printf("------------------------------------\n");
+
+        printf("Record Number : %d\n", i + 1);
+
+        printf("Enter the Roll no : ");
+        gets(stddata[i].roll);
+        fflush(stdin);
+
+        printf("Enter the Name of Student : ");
+        gets(stddata[i].name);
+        fflush(stdin);
+
+        printf("Enter the Class : ");
+        gets(stddata[i].class);
+        fflush(stdin);
+
+        for (int j = 0; j < 5; j++) {
+            printf("Enter Marks of Subject %d : ", j + 1);
+            scanf("%d", &stddata[i].marks[j]);
+        }
+        fflush(stdin);
+
+        printf("--------------------------------------\n");
+    }
+
+    printf("\n=== Student Records ===\n");
+    printf("\n----------------------------------\n");
+
+    for (int i = 0; i < size; i++) {
+        printf("\nStudent Record number %d:\n", i + 1);
+        printf("\n----------------------------------\n\n");
+        printf("Roll                : %s\n", stddata[i].roll);
+        printf("Name                : %s\n", stddata[i].name);
+        printf("Class               : %s\n", stddata[i].class);
+        printf("Marks               : ");
+        for (int j = 0; j < 5; j++) {
+            printf("%d ", stddata[i].marks[j]);
+        }
+        printf("\n----------------------------------\n");
+    }
+
+    return 0;
+}
+
+    </pre>
+    
+    </details>
+    <details>
+        <summary>show output</summary>
+        <h4>Output</h4>
+
+
+        </details>
+    </body>
+    </html>

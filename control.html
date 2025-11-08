@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<title>Decision Control Structures - C PROGRAMS</title>
+
+ <body>
+
+    <style>
+        body{
+   h1{
+    text-align: center;
+   } 
+  
+   background-color:  rgb(241, 164, 140);
+}
+
+</style>
+
+<div class="nav"><a href="index.html">&larr; Back to Topics</a> | <a href="basic.html">Previous: basic input output&rarr;</a></div><a href="functions.html">Next: Functions &rarr;</a></div>
+  <h1> Decision Control Structures</h1>
+  <div class="topic">
+    <div class="question">
+        <h3>1.Write a program to enter the number from the user and check it is positive or negative or 0 (zero)</h3>
+        </div>
+<details>
+        <summary>show code</summary>
+        <pre>
+   # include < stdio.h >
+
+    int main(){
+    int a;
+    printf("Enter the number :");
+    scanf("%d",&a);
+
+    a==0 ? printf("The number is ZERO") : a>0 ? printf("The number is +ve ") : printf("The number is -ve") ; 
+
+    return 0;
+    }
+    </details>
+      <details>
+       <summary>show output</summary> 
+        </pre> 
+        <h4>Output:</h4>
+        
+Enter the number :0
+The number is ZERO
+ 
+Enter the number :5
+The number is +ve 
+
+Enter the number :-5
+The number is -ve
+   </details>
+     <div class="question">
+        <h3>2. Enter a number from user and check it is odd or even.</h3>
+        </div>
+<details>
+        <summary>show code</summary>
+        <pre>
+    #include < stdio.h >
+
+    int main(){
+    int a;
+    printf("Enter the number :");
+    scanf("%d",&a);
+    
+    a%2==0 ? printf("The number is EVEN") : printf("The number is ODD");
+
+    return 0; 
+    }
+    </details>
+      <details>
+       <summary>show output</summary> 
+        </pre> 
+         <h4>Output:</h4>
+
+    Enter the number :2
+    The number is EVEN
+
+   Enter the number :3
+   The number is ODD
+
+     </details>
+      
+
+    <div class="question">
+        <h3>3. Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit ?</h3>
+        </div>
+
+<details>
+        <summary>show code</summary>
+     <pre>
+    #include < stdio.h >
+
+    int main() {
+    int n;
+    printf("Enter the number : ");
+    scanf("%d", &n);
+
+    if (n < 0)
+        n = -n;  
+
+    if (n >= 0 && n <= 9)
+        printf("It is a 1-digit number\n");
+    else if (n >= 10 && n <= 99)
+        printf("It is a 2-digit number\n");
+    else if (n >= 100 && n <= 999)
+        printf("It is a 3-digit number\n");
+    else if (n >= 1000 && n <= 9999)
+        printf("It is a 4-digit number\n");
+    else if (n >= 10000 && n <= 99999)
+        printf("It is a 5-digit number\n");
+    else
+        printf("It is more than 5 digits\n");
+
+    return 0;
+    }
+</details>
+      <details>
+       <summary>show output</summary> 
+        </pre> 
+         <h4>Output:</h4>
+
+   Enter the number : 1
+   It is a 1-digit number
+
+    Enter the number : 22
+    It is a 2-digit number
+    
+    Enter the number : 333
+    It is a 3-digit number
+
+    Enter the number : 4444
+    It is a 4-digit number
+
+   Enter the number : 55555
+   It is a 5-digit number
+
+    Enter the number : 666666
+    It is more than 5 digits
+
+</details>
+
+     
+    
+
+    <div class="question">
+        <h3>4. Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid  ?</h3>
+        </div>
+<details>
+        <summary>show code</summary>
+<pre>
+    # include < stdio.h >
+
+    int main(){
+     int a ;
+    printf("Enter the number : ");
+    scanf("%d",&a);
+
+    if (a >= 0 && a < 40)
+        printf("Fail\n");
+    else if (a >= 40 && a < 60)
+        printf("C Grade\n");
+    else if (a >= 60 && a < 80)
+        printf("B Grade\n");
+    else if (a >= 80 && a <= 100)
+        printf("A Grade\n");
+    else
+        printf("Enter the mark\n");
+
+    return 0;
+
+
+
+    return 0;
+    }
+    </details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+        <h4>Output:</h4>
+       
+   Enter the number : 45
+   C Grade
+   Enter the number : 68
+   B Grade
+   Enter the number : 90
+   A Grade
+
+</details>
+     
+      
+
+    <div class="question">
+        <h3>5. Enter a number from the user and check it is a decimal number or not ?</h3>
+        </div>
+<details>
+        <summary>show code</summary>
+        <pre>
+    #include < stdio.h >
+
+    int main() {
+    float a;
+    printf("Enter the  number : ");
+    scanf("%f", &a);
+
+    if (a == (int)a)
+        printf("It is not decimal number\n");
+    else
+        printf("It is decimal number\n");
+
+    return 0;
+    }
+    </details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+         <h4>Output:</h4>
+        Enter the  number : 10
+        It is not decimal number
+        Enter the  number : 10.2
+        It is decimal number
+
+</details>
+     
+
+
+    <div class="question">
+        <h3>6. Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number ?</h3>
+        </div>
+<details>
+        <summary>show code</summary>
+        <pre>
+    #include < stdio.h >
+
+    int main() {
+    int n;
+    printf("Enter the number : ");
+    scanf("%d", &n);
+
+    if (n==0)
+    printf("It is Zero ");
+    else if (n>0)
+    printf("The -ve of %d is : %d",n,-n);
+    
+    else if (n< 0)
+    printf("The +ve of %d is : %d",n,-n);
+    
+
+
+    return 0;
+    }
+    </details>
+      <details>
+       <summary>show output</summary>
+
+        </pre> 
+          <h4>Output:</h4>
+        
+Enter the number : 10
+The -ve of 10 is : -10
+Enter the number : -15
+The +ve of -15 is : 15
+
+     </details>
+     
+   <div class="question">
+        <h3>7. Enter a character from the user and check that it is an alphabet ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+        <pre>
+    #include < stdio.h >
+    #include < conio.h >
+
+    int main(){
+    char a;
+    printf("Enter the char : ");
+    a=getch();
+
+    if ((a>=65 && a<=90 ) || (a>=97 && a<=122))
+    printf("\n%c is a alphabet ",a);
+    else 
+    printf("\n%c is not a  alphabet ",a);
+    
+
+    return 0;
+
+    }
+    </details>
+      <details>
+       <summary>show output</summary>
+
+        </pre> 
+          <h4>Output:</h4>
+</details>
+      
+    <div class="question">
+        <h3>8. Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times ?</h3>
+        </div>
+ <details>
+        <summary>show code</summary>
+     <pre>
+    #include < stdio.h >
+
+   int main() {
+    int a;
+    printf("Enter the  number : ");
+    scanf("%d", &a);
+
+    if (a < 0)
+        printf("Number is -ve ,  Square :  %d\n", a * a);
+    else
+        printf("Number is +ve , after incrementing 20 times : %d\n", a + 20);
+
+    return 0;
+     }
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+        <h4>Output:</h4> 
+Enter the  number : 10
+Number is +ve , after incrementing 20 times : 30
+Enter the  number : -10
+Number is -ve ,  Square :  100
+
+</details>
+     
+    <div class="question">
+        <h3>9. Enter the number from the user it the number is negative or positive and find out of that number ?</h3>
+   </div>
+     
+<details>
+        <summary>show code</summary>
+  <pre>
+   #include < stdio.h >
+
+   int main() {
+    int a;
+    printf("Enter the number : ");
+    scanf("%d", &a);
+
+    if (a > 0)
+        printf("%d is a positive number\n", a);
+    else if (a < 0)
+        printf("%d is a negative number\n", a);
+    else
+        printf("The number is zero\n");
+
+
+    return 0;
+    }     
+</details>
+      <details>
+       <summary>show output</summary>
+
+        </pre> 
+        <h4>Output:</h4> 
+        
+Enter the number : 2
+2 is a positive number
+Enter the number : 0
+The number is zero
+
+     
+     </details>
+     
+     <div class="question">
+        <h3>10. Enter two number from user and check which is the greater number and print the greater number ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main() {
+    int a, b;
+    printf("Enter first number : ");
+    scanf("%d", &a);
+
+    printf("Enter second number : ");
+    scanf("%d", &b);
+
+    if (a > b)
+        printf("%d is greater\n", a);
+    else if (b > a)
+        printf("%d is greater\n", b);
+    else
+        printf("Both  are equal\n");
+
+    return 0;
+    }
+
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+        <h4>Output:</h4> 
+   Enter first number : 2
+   Enter second number : 5
+   5 is greater
+
+
+     </details>
+      
+      
+    <div class="question">
+        <h3>11. Enter a number from user and check it is divisible by 4 or not ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+   <pre>
+    #include < stdio.h >
+
+    int main() {
+    int a;
+    printf("Enter the number : ");
+    scanf("%d", &a);
+
+    if (a % 4 == 0)
+        printf("%d is divisible by 4\n", a);
+    else
+        printf("%d is not divisible by 4\n", a);
+
+    return 0;
+     }
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+        <h4>Output:</h4> 
+       
+Enter the number :16
+16 is divisible by 4
+Enter the number : 23
+23 is not divisible by 4
+
+
+     
+     </details>
+    <div class="question">
+        <h3>12. Enter a four characters from users and check they are equal or not ?</h3>
+   </div>
+
+   <details>
+        <summary>show code</summary>
+   <pre>
+   #include < stdio.h >
+
+   int main() {
+    char a, b, c, d;
+
+    printf("Enter 1st character : ");
+    scanf(" %c", &a);
+
+    printf("Enter 2nd character : ");
+    scanf(" %c", &b);
+
+    printf("Enter 3rd character : ");
+    scanf(" %c", &c);
+
+    printf("Enter 4th character : ");
+    scanf(" %c", &d);
+
+    if (a == b && b == c && c == d)
+        printf("All characters are equal\n");
+    else
+        printf("All characters are not equal\n");
+
+    return 0;
+}
+</details>
+      <details>
+       <summary>show output</summary>
+   </pre>
+    <h4>Output:</h4> 
+
+Enter 1st character : a
+Enter 2nd character : b
+Enter 3rd character : s
+Enter 4th character : c
+All characters are not equal
+</details>
+ 
+
+<div class="question">
+        <h3>13. Enter three numbers from users and tell which is greater ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+   #include  < stdio.h >
+
+   int main() {
+    int a, b, c;
+
+    printf("Enter first number : ");
+    scanf("%d", &a);
+
+    printf("Enter second number : ");
+    scanf("%d", &b);
+
+    printf("Enter third number : ");
+    scanf("%d", &c);
+
+    if (a > b && a > c)
+        printf("First number is greater\n");
+    else if (b > a && b > c)
+        printf("Second number is greater\n");
+    else
+        printf("Third number is greater\n");
+
+    return 0;
+    }
+
+    </details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+          <h4>Output:</h4> 
+      
+Enter first number : 2
+Enter second number : 6
+Enter third number : 5
+Second number is greater
+
+       </details>
+   
+
+    <div class="question">
+        <h3>14. Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid ? ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+   <pre>
+  #include < stdio.h >
+
+   int main() {
+    int a;
+
+    printf("Enter number of days : ");
+    scanf("%d", &a);
+
+    if (a == 31)
+        printf("jan mar may jul aug oct dec");
+    else if (a == 30)
+        printf("apr jun sep nov");
+    else if (a == 28 || a == 29)
+        printf("feb");
+    else
+        printf("invalid");
+
+    return 0;
+    }
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+         <h4>Output:</h4> 
+    
+Enter number of days : 30
+apr jun sep nov
+
+Enter number of days : 28
+feb
+     </details>
+    
+
+    <div class="question">
+        <h3>15. Enter one digit number from user and print in words ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+<pre>
+  #include < stdio.h >
+
+    int main() {
+    int a;
+
+    printf("Enter one digit number : ");
+    scanf("%d", &a);
+
+    switch(a) {
+        case 0: printf("zero"); break;
+        case 1: printf("one"); break;
+        case 2: printf("two"); break;
+        case 3: printf("three"); break;
+        case 4: printf("four"); break;
+        case 5: printf("five"); break;
+        case 6: printf("six"); break;
+        case 7: printf("seven"); break;
+        case 8: printf("eight"); break;
+        case 9: printf("nine"); break;
+        default: printf("invalid");
+    }
+
+    return 0;
+     }
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+         <h4>Output:</h4> 
+         
+Enter one digit number : 1
+one
+
+Enter one digit number : 7
+seven
+     </details>
+     
+
+    <div class="question">
+        <h3>16. Enter two characters from user and check both are same or not, if not same then find out difference between them ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+<pre>
+  #include < stdio.h >
+   #include < conio.h >
+
+   int main() {
+    float a, b;
+
+    printf("Enter first character : ");
+   scanf("%f", &a);
+
+    printf("\nEnter second character : ");
+    scanf("%f", &b);
+    if (a == b)
+        printf("\nBoth are same");
+    else
+        printf("\nBoth are different, difference is : %f", a - b);
+
+    return 0;
+     }
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+         <h4>Output:</h4> 
+
+Enter first character : 3
+
+Enter second character : 2
+
+Both are different, difference is : 1.000000
+     </details>
+    
+    <div class="question">
+        <h3>17. Enter three numbers from user and which is greater ?</h3>
+   </div>
+
+<details>
+        <summary>show code</summary>
+<pre>
+  #include < stdio.h >
+
+    int main() {
+    int a, b, c;
+
+    printf("Enter first number : ");
+    scanf("%d", &a);
+
+    printf("Enter second number : ");
+    scanf("%d", &b);
+
+    printf("Enter third number : ");
+    scanf("%d", &c);
+
+    if (a > b && a > c)
+        printf("First number is greater\n");
+    else if (b > a && b > c)
+        printf("Second number is greater\n");
+    else
+        printf("Third number is greater\n");
+
+    return 0;
+   }
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+       <h4>Output:</h4> 
+      
+Enter first number : 6
+Enter second number : 3
+Enter third number : 9
+Third number is greater
+</details>
+     
+    <div class="question">
+        <h3>18. Enter two digit number from user and print it in word (like 50 will be five zero) ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+   <pre>
+   #include < stdio.h >
+    #include < conio.h >
+
+    int main() {
+    char num[3];
+    printf("Enter two digit number : ");
+
+    num[0]=getch();
+    num[1]=getch();
+    printf("\n");
+
+    for (int i = 0; i < 2; i++) {
+        switch (num[i]) {
+            case '0': printf("zero "); break;
+            case '1': printf("one "); break;
+            case '2': printf("two "); break;
+            case '3': printf("three "); break;
+            case '4': printf("four "); break;
+            case '5': printf("five "); break;
+            case '6': printf("six "); break;
+            case '7': printf("seven "); break;
+            case '8': printf("eight "); break;
+            case '9': printf("nine "); break;
+            default: printf("invalid "); break;
+        }
+    }
+
+    return 0;
+    }
+</details>
+      <details>
+       <summary>show output</summary>
+
+        </pre> 
+         <h4>Output:</h4> 
+     </details>
+      
+
+     <div class="question">
+        <h3>19. Enter a character from user and it is in upper case, lower case, special characters or numbers ?</h3>
+   </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+    #include < conio.h >
+
+    int main() {
+    char a;
+    printf("Enter a character : ");
+    scanf("%c",&a);
+    if (a >= 65 && a <= 90)
+        printf("\nIt is an uppercase letter");
+    else if (a >= 97 && a <= 122)
+        printf("\nIt is a lowercase letter");
+    else if (a >= 48 && a <= 57)
+        printf("\nIt is a number");
+    else
+        printf("\nIt is a special character");
+
+    return 0;
+    }
+</details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+         <h4>Output:</h4> 
+         
+Enter a character : G
+It is an uppercase letter
+     </details>
+     
+
+    <div class="question">
+        <h3>20. Enter the year from user and check its leap year or not ?</h3>
+   </div>
+
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+     int main() {
+    int year;
+
+    printf("Enter the year : ");
+    scanf("%d", &year);
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        printf("Leap year");
+    else
+        printf("Not a leap year");
+
+    return 0;
+     }
+
+</details>
+      <details>
+       <summary>show output</summary>
+
+        </pre> 
+        <h4>Output</h4>
+       Enter the year : 2025
+       Not a leap year
+     </details>
+
+    <div class="question">
+        <h3>21. Enter date, month, year and check it is valid date or not ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+   <pre>
+    #include < stdio.h >
+
+int main() {
+    int d, m, y, days;
+
+    printf("Enter the date : ");
+    scanf("%d", &d);
+
+    printf("Enter month : ");
+    scanf("%d", &m);
+
+    printf("Enter the year : ");
+    scanf("%d", &y);
+
+    if (y < 1 || m < 1 || m > 12 || d < 1) {
+        printf("Enter a valid date");
+        return 0;
+    }
+
+    switch (m) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            days = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            days = 30;
+            break;
+        case 2:
+            if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+                days = 29;
+            else
+                days = 28;
+            break;
+        default:
+            printf("invalid month");
+            return 0;
+    }
+
+    if (d > days)
+        printf("Enter a valid no of days");
+    else {
+        printf("%d-%d-%d is  a valid date", d, m, y);
+    }
+
+    return 0;
+}
+
+</details>
+      <details>
+       <summary>show output</summary>
+   </pre>
+    <h4>Output</h4>
+
+Enter the date : 10
+Enter month : 05
+Enter the year : 2007
+10-5-2007 is  a valid date
+  
+
+</details>
+
+
+ <div class="question">
+        <h3>22. Enter current date of DOB of user and find out difference ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+   <pre>
+    
+
+
+        </pre> 
+     </details>
+      <details>
+       <summary>show output</summary>
+      <h4>Output:</h4>
+
+</details>
+
+     <div class="question">
+        <h3>23. Write a program to calculate area and perimeter of rectangle ?</h3>
+   </div>
+<details>
+        <summary>show code</summary>
+    <pre>
+    #include < stdio.h >
+
+    int main() {
+    int l, b;
+
+    printf("Enter the length of rectangle : ");
+    scanf("%d", &l);
+
+    printf("Enter the breath of rectangle : ");
+    scanf("%d", &b);
+
+    printf("Area of rectangle is : %d", l*b);
+    printf("\nPerimeter of rectangle is :  %d", (l+b)*2);
+
+    return 0;
+    }
+
+ </details>
+      <details>
+       <summary>show output</summary>
+        </pre> 
+        <h4>Output</h4>
+        
+Enter the length of rectangle : 70
+Enter the breath of rectangle : 60
+Area of rectangle is : 4200
+Perimeter of rectangle is :  260
+
+     
+   </details>
+</body>
+</html>
